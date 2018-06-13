@@ -43,4 +43,26 @@ docker run -ti --rm walterwhites/cordova bash
 
 ## Informations: 
 
-If you get error "Copying a file in a Dockerfile, no such file or directory" check this post https://stackoverflow.com/questions/32997269/copying-a-file-in-a-dockerfile-no-such-file-or-directory
+  - If you get error "Copying a file in a Dockerfile, no such file or directory" check this post https://stackoverflow.com/questions/32997269/copying-a-file-in-a-dockerfile-no-such-file-or-directory
+  
+  - If you have error "You have not accepted the license agreements of the following SDK components" when you build your app, you need to accept licenses
+  
+1) Step 1:
+
+```
+cd /opt/android/tools 
+./android
+```
+
+2) Step 2, run:
+
+```
+android update sdk --no-ui --all --filter platform-tools,android-25,extra-android-m2repository
+```
+
+and accepted the licenses
+
+3) Step 3, update sdk manager:
+```
+sdkmanager --update
+```
