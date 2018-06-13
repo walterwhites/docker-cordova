@@ -47,22 +47,27 @@ docker run -ti --rm walterwhites/cordova bash
   
   - If you have error "You have not accepted the license agreements of the following SDK components" when you build your app, you need to accept licenses
   
-1) Step 1:
+  
+1) go to android tools and run .android
 
 ```
 cd /opt/android/tools 
 ./android
 ```
 
-2) Step 2, run:
+
+2) update sdk:
 
 ```
 android update sdk --no-ui --all --filter platform-tools,android-25,extra-android-m2repository
 ```
 
-and accepted the licenses
+Accept the licenses
 
-3) Step 3, update sdk manager:
+
+3) update sdk manager:
 ```
 sdkmanager --update
 ```
+
+Accept the licenses
