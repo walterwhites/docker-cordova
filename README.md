@@ -7,6 +7,7 @@ Build your app with cordova in docker container
 * [Build image](#build-image)
 * [Create a container](#create-a-container)
 * [Informations](#informations)
+* [Build your app](#build-your-app)
 
 ## Create a Dockerfile
 
@@ -71,3 +72,23 @@ sdkmanager --update
 ```
 
 Accept the licenses
+
+
+## Build your app: 
+
+To run your app with cordova in container:
+
+1) go to your cordova project
+
+2) add the platform if you don't already add it
+
+```
+cordova platform add android
+```
+
+3) build you app
+
+```
+cordova build android
+```
+
