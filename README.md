@@ -102,6 +102,12 @@ cd /opt/android/tools
 android update sdk --no-ui --all --filter platform-tools,android-25,extra-android-m2repository
 ```
 
+or
+
+```
+android update sdk --no-ui
+```
+
 Accept the licenses
 
 
