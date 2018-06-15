@@ -99,6 +99,7 @@ cd /opt/android/tools
 2) update sdk:
 
 ```
+cd /opt/android/tools 
 android update sdk --no-ui --all --filter platform-tools,android-25,extra-android-m2repository
 ```
 
@@ -113,6 +114,7 @@ Accept the licenses
 
 3) update sdk manager:
 ```
+cd /opt/android/tools/bin
 sdkmanager --update
 ```
 
