@@ -3,12 +3,12 @@ Build your app with cordova in docker container
 
 ## Table of Contents
 
-* [Build container while send it files from host](build-container-and-send-it-files-from-host)
+* [Build container while send it files from host](#build-container-and-send-it-files-from-host)
   * [Create a Dockerfile](#create-a-dockerfile)
   * [Build image](#build-image)
   * [Create a container](#create-a-container)
 
-* [Or build container while share data with volumes](or-build-container-and send-it-files-from-host)
+* [Or build container while share data with volumes](#or-build-container-and send-it-files-from-host)
 
 * [Informations](#informations)
 * [Build your app](#build-your-app)
