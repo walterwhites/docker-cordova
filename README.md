@@ -3,11 +3,18 @@ Build your app with cordova in docker container
 
 ## Table of Contents
 
-* [Create a Dockerfile](#create-a-dockerfile)
-* [Build image](#build-image)
-* [Create a container](#create-a-container)
+* [1) Build container while send it files from host](#1)-build-container-and-send-it-files-from-host)
+  * [Create a Dockerfile](#create-a-dockerfile)
+  * [Build image](#build-image)
+  * [Create a container](#create-a-container)
+
+* [2) Or build container while share data with volumes](#2)-or-build-container-and send-it-files-from-host)
+
 * [Informations](#informations)
 * [Build your app](#build-your-app)
+
+
+## 1) Build container while send it files from host
 
 ## Create a Dockerfile
 
@@ -40,6 +47,38 @@ Create and run new container based on the image (we delete it after exit)
 ```
 docker run -ti --rm walterwhites/cordova bash
 ```
+
+
+## 2) Or build container while share data with volumes
+
+Dockerfile:
+
+```
+FROM beevelop/cordova:latest
+MAINTAINER Walter whites <hopemagie@gmail.com>
+WORKDIR /workspace
+```
+
+Run:
+
+```
+sudo docker build . -t walterwhites/cordova
+```
+
+then:
+
+```
+docker run --name=cordova -v /Users/username/workspace/your_host_dir:/workspace walterwhites/cordova
+```
+
+and:
+
+```
+docker run -ti cordova
+```
+
+(option -t is to get terminal in container, option -i to interact with this one)
+
 
 
 ## Informations: 
