@@ -22,10 +22,12 @@ Build your app with cordova in docker container
 FROM beevelop/cordova:latest
 MAINTAINER Walter whites <hopemagie@gmail.com>
 WORKDIR /workspace
-ADD /gusto-coffee-mobile-app /workspace
+ADD /Dir_host /workspace
 EXPOSE 3000
 VOLUME /workspace
 ```
+
+Dir_host is the path of the dir you want copy of the host to the container
 
 ## Build image
 
