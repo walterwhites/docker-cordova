@@ -12,6 +12,7 @@ Build your app with cordova in docker container
 
 * [Informations](#informations)
 * [Build your app](#build-your-app)
+* [Build with container in 2 lines](#build-with-container-in-2-lines)
 
 
 ## Build container while send it files from host
