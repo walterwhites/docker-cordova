@@ -117,7 +117,7 @@ Accept the licenses
 3) update sdk manager:
 ```
 cd /opt/android/tools/bin
-sdkmanager --update
+./sdkmanager --update
 ```
 
 Accept the licenses
