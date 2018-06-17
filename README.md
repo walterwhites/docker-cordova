@@ -79,6 +79,27 @@ option -rm is to stop the container when exit it
 option -v is to create volume to share between your host (local machine) and the container
 
 
+Note if you want keep the same container and don't delete it after exit, you should run:
+```
+docker run -ti --name=cordova -v /Users/FlorentMasdoumier/workspace/gusto-coffee-mobile-app:/workspace walterwhites/cordova
+```
+
+After exit if is stoped you should start it:
+```
+docker start CONTAINER_ID
+```
+
+and to execute with bash:
+```
+docker exec -it <container-name/ID> bash
+```
+
+to know the container id/name you can run:
+```
+docker ps -a
+```
+
+Option -a is to know all container even if are stopped
 
 ## Informations: 
 
