@@ -81,7 +81,7 @@ option -v is to create volume to share between your host (local machine) and the
 
 Note if you want keep the same container and don't delete it after exit, you should run:
 ```
-docker run -ti --name=cordova -v /Users/FlorentMasdoumier/workspace/gusto-coffee-mobile-app:/workspace walterwhites/cordova
+docker run -ti --name=cordova -v /Users/username/workspace/gusto-coffee-mobile-app:/workspace walterwhites/cordova
 ```
 
 After exit if is stoped you should start it:
