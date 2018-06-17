@@ -12,7 +12,6 @@ Build your app with cordova in docker container
 
 * [Informations](#informations)
 * [Build your app](#build-your-app)
-* [Build with container in 2 lines](#build-with-container-in-2-lines)
 
 
 ## Build container while send it files from host
@@ -54,33 +53,28 @@ docker run -ti --rm walterwhites/cordova bash
 
 ## Or build container while share data with volumes
 
-Dockerfile:
+To build app into the docker container
 
-```
-FROM beevelop/cordova:latest
-MAINTAINER Walter whites <hopemagie@gmail.com>
-WORKDIR /workspace
-```
-
-Run:
+1) Build image of Dockerfile (which is in source)
 
 ```
 sudo docker build . -t walterwhites/cordova
 ```
 
-then:
+2) Run container
 
 ```
-docker run --name=cordova -v /Users/username/workspace/your_host_dir:/workspace walterwhites/cordova
+docker run -ti --rm --name=cordova -v /Users/username/workspace/DIR_HOST_TO_COPY:/DIR_CONTAINER walterwhites/cordova
 ```
 
-and:
+DIR_HOST_TO_COPY = path of the directory of your host machine you want copy to the docker container
 
-```
-docker run -ti cordova
-```
+DIR_CONTAINER = path on your docker container where you want dir being copied
 
-(option -t is to get terminal in container, option -i to interact with this one)
+option -t is to run the container with terminal
+option -i is to run in interactive mode
+option -rm is to stop the container when exit it
+option -v is to create volume to share between your host (local machine) and the container
 
 
 
@@ -141,24 +135,3 @@ cordova platform add android
 ```
 cordova build android
 ```
-
-
-## Build with container in 2 lines: 
-
-To build app into the docker container
-
-1) Build image of Dockerfile (which is in source)
-
-```
-sudo docker build . -t walterwhites/cordova
-```
-
-2) Run container
-
-```
-docker run -ti --rm --name=cordova -v /Users/username/workspace/DIR_HOST_TO_COPY:/DIR_CONTAINER walterwhites/cordova
-```
-
-DIR_HOST_TO_COPY = path of the directory of your host machine you want copy to the docker container
-
-DIR_CONTAINER = path on your docker container where you want dir being copied
